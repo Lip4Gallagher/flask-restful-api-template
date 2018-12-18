@@ -15,6 +15,7 @@ def handle_error(e):
         code = e.code
     return jsonify(error=str(e)), code
 
+
 for ex in default_exceptions:
     app.register_error_handler(ex, handle_error)
 
